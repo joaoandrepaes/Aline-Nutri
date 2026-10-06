@@ -523,3 +523,39 @@ footer.on-clay .btn:hover{background:#F1F2EA;color:var(--forest);border-color:#F
 .btn.dark{color:var(--forest)}
 .btn.dark:hover{background:var(--forest);border-color:var(--forest);color:#fff}
 .svc-card a.lk,.rev-more a,.prose a{color:var(--forest)}
+
+/* ===== v9: linha marcada da paleta (#AF4425 · #898534 · #F7E290) como cores do site =====
+   Ferrugem #AF4425: botões principais, etiquetas, estrelas, detalhes (contraste 5.7 com branco)
+   Oliva #898534: palavras em destaque nos títulos, números, linhas e faixa final (só texto grande/decorativo)
+   Amarelo #F7E290: fundos (topo em tom claro, faixas de chamada no tom cheio)
+   Vinho #48221D (logo) segue nos títulos; verde-escuro #363A29 no rodapé */
+:root{
+  --rust:#AF4425; --olive-m:#898534; --butter:#F7E290;
+  --blush:#FCF5DC; --sand:#FBF8EE; --paper:#FFFDF8; --line:#E6DCB8;
+  --clay:#AF4425; --accent:#898534; --mist:#5E574B;
+}
+body{color:#2E2A22}
+.prose,.meet .txt,.who .lead,.svc .desc,.psr p{color:#4A4438}
+.hero h1 .up,.phero h1 .up{color:var(--olive-m)}
+.hero .sub em{color:var(--rust)}
+.cred-bar b{color:var(--olive-m)}
+.stars,.scores span{color:var(--rust)}
+.quotes li::before,.quotes li::after{color:var(--rust)}
+.psr div,.svc-card,.myth{border-top-color:var(--olive-m)}
+.btn.solid,.on-clay .btn.solid{background:var(--rust);border-color:var(--rust);color:#fff}
+.btn.solid:hover,.on-clay .btn.solid:hover{background:var(--wine);border-color:var(--wine);color:#fff}
+.btn.dark{color:var(--wine)}
+.btn.dark:hover{background:var(--wine);border-color:var(--wine);color:#fff}
+.on-clay .btn:hover{background:var(--wine);border-color:var(--wine);color:#fff}
+.wa-float{background:var(--rust)}
+.wa-float:hover{background:var(--wine)}
+.plans span.rec{background:var(--rust);border-color:var(--rust);color:#fff}
+.mid-cta{background:var(--butter)}
+.mid-cta .micro{color:#4A4438}
+.band{background:var(--olive-m)}
+.band-card{background:var(--paper)}
+.sec:not(.sand) .review,.sec:not(.sand) .scores a{background:var(--sand)}
+.sec.sand .review,.sec.sand .scores a{background:var(--paper)}
+.svc-card a.lk,.rev-more a,.prose a{color:var(--rust)}
+.svc-card small,.psr small,.steps li::before,.clabel,.svc .tag{color:var(--rust)}
+footer.on-clay{background:var(--forest)}
