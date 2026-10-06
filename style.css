@@ -344,6 +344,22 @@ footer.on-clay .btn:hover{background:var(--paper);color:var(--olive);border-colo
 .contact-grid .ph{aspect-ratio:4/3}
 img.ph{display:block;width:100%;height:auto;object-fit:cover;background:var(--sand)}
 .mpanel .grp{text-decoration:none}
+.stars{color:#B08A3E;letter-spacing:.12em;font-size:14px;margin:0 0 12px}
+.review{display:flex;flex-direction:column;margin:0}
+.review blockquote{flex:1;font-size:17.5px;line-height:1.5}
+.review figcaption a{color:inherit;text-underline-offset:3px}
+.reviews{align-items:stretch}
+.scores{display:flex;gap:14px;flex-wrap:wrap}
+.scores a{display:grid;grid-template-columns:auto auto;column-gap:10px;align-items:center;text-decoration:none;background:var(--paper);padding:14px 18px;color:var(--cocoa)}
+.scores b{font-family:var(--display);font-weight:300;font-size:34px;line-height:1;grid-row:span 2;color:var(--clay-deep)}
+.scores span{color:#B08A3E;font-size:13px;letter-spacing:.1em}
+.scores small{font-size:12.5px;color:var(--mist)}
+.scores a:hover small{text-decoration:underline}
+.sec.sand .review,.sec.sand .scores a{background:var(--paper)}
+.sec:not(.sand) .review,.sec:not(.sand) .scores a{background:var(--blush)}
+.rev-more{margin-top:28px}.rev-more a{color:var(--clay-deep);font-weight:500;text-underline-offset:5px}
+.rev-score{margin-bottom:12px;color:var(--cocoa)!important;font-size:15px}
+.rev-score b{font-family:var(--display);font-weight:300;font-size:44px;line-height:1;color:var(--clay-deep);margin-right:8px;vertical-align:-6px}
 
 /* ===== v6: estrutura de página de serviço, conversão mobile ===== */
 body{font-weight:400}
@@ -448,3 +464,43 @@ body{font-weight:400}
   .hero .wrap.hero-grid>img.ph{order:2;max-width:300px;justify-self:start}
   .phero .ph{max-width:300px}
 }
+
+/* ===== v7: paleta oficial da marca (arquivo de cores da Aline) =====
+   Primárias: vinho #48221D · verde-escuro #363A29 · cinza-azulado #D8E0DF
+   Secundárias (detalhes): terracota #B95A31 · oliva #7D7230 */
+:root{
+  --wine:#48221D; --forest:#363A29; --mist-blue:#D8E0DF;
+  --cocoa:#48221D; --clay-deep:#48221D; --clay:#B95A31;
+  --blush:#D8E0DF; --sand:#EDF1F0; --paper:#FAF9F7;
+  --line:#C6D0CF; --mist:#5A5150;
+  --olive:#363A29; --olive-2:#363A29;
+  --accent:#7D7230;
+}
+body{color:#3A2D2A}
+.prose,.meet .txt,.who .lead,.svc .desc,.psr p{color:#4E4442}
+.hero h1,.phero h1,.hero h1 .lead-in,.phero h1 .lead-in{color:var(--wine)}
+.hero h1 .up,.phero h1 .up{color:var(--accent)}
+.hero .sub em{color:var(--accent)}
+.quotes li::before,.quotes li::after{color:var(--clay)}
+.stars,.scores span{color:var(--clay)}
+.btn.solid,.on-clay .btn.solid{background:var(--forest);border-color:var(--forest);color:#fff}
+.btn.solid:hover,.on-clay .btn.solid:hover{background:var(--wine);border-color:var(--wine)}
+.on-clay .btn:hover{background:var(--wine);color:#fff;border-color:var(--wine)}
+.wa-float{background:var(--forest)}
+.wa-float:hover{background:var(--wine)}
+.plans span.rec{background:var(--forest);border-color:var(--forest)}
+
+/* Faixa final verde, rodapé vinho (cores do símbolo) */
+.band{background:var(--forest)}
+footer.on-clay{background:var(--wine);color:#F4EFEC}
+footer.on-clay .btn{color:#F4EFEC}
+footer.on-clay .btn:hover{background:#F4EFEC;color:var(--wine);border-color:#F4EFEC}
+
+/* Logo: símbolo + assinatura */
+.logo{flex-direction:row;align-items:center;gap:12px}
+.logo img{width:46px;height:auto;display:block}
+.logo span{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:var(--display);font-weight:400;font-size:27px;letter-spacing:-.01em;color:var(--wine)}
+.logo small{font-family:var(--body);font-weight:300;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--forest);margin-top:6px;opacity:1}
+@media (max-width:480px){.logo img{width:38px}.logo b{font-size:23px}}
+.meet h2,.faq h2,.how-txt h2,.center-title,.sec-head h2,.two>h2,.where-sec h2,.svc-head h2,.nf h1{color:var(--wine)}
