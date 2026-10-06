@@ -504,3 +504,22 @@ footer.on-clay .btn:hover{background:#F4EFEC;color:var(--wine);border-color:#F4E
 .logo small{font-family:var(--body);font-weight:300;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--forest);margin-top:6px;opacity:1}
 @media (max-width:480px){.logo img{width:38px}.logo b{font-size:23px}}
 .meet h2,.faq h2,.how-txt h2,.center-title,.sec-head h2,.two>h2,.where-sec h2,.svc-head h2,.nf h1{color:var(--wine)}
+
+/* ===== v8: verde como cor principal; vinho como assinatura (logo e títulos) ===== */
+:root{
+  --blush:#E3E6DA; --sand:#F0F1EA; --paper:#FAFAF6; --line:#CDD1C1;
+  --clay:#7D7230; --accent:#7D7230; --mist:#575A4C;
+}
+body{color:#2F3126}
+.prose,.meet .txt,.who .lead,.svc .desc,.psr p{color:#45483B}
+.stars,.scores span{color:#A39941}
+.quotes li::before,.quotes li::after{color:#7D7230}
+.band{background:var(--blush)}
+.band-card{background:var(--paper)}
+footer.on-clay{background:var(--forest);color:#F1F2EA}
+footer.on-clay .btn{color:#F1F2EA}
+footer.on-clay .btn:hover{background:#F1F2EA;color:var(--forest);border-color:#F1F2EA}
+.on-clay .btn:hover{background:var(--forest);border-color:var(--forest);color:#fff}
+.btn.dark{color:var(--forest)}
+.btn.dark:hover{background:var(--forest);border-color:var(--forest);color:#fff}
+.svc-card a.lk,.rev-more a,.prose a{color:var(--forest)}
