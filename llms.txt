@@ -1,0 +1,16 @@
+# Aline Fernanda - Nutricionista Clínica e Comportamental
+
+> Nutricionista em Curitiba (Av. Batel, 1230, bairro Batel), CRN-8 10069, formada pela UFPR, com 5 anos de atendimento hospitalar (residência no CHC-UFPR e Hospital INC) e formação em nutrição comportamental. Atende mulheres que querem emagrecer de forma sustentável, presencialmente no Batel e online. Atendimento particular, sem convênio. Agendamento pelo WhatsApp (41) 99517-2214.
+
+## Páginas principais
+- [Início](https://aline-nutri-sigma.vercel.app/): nutricionista em Curitiba para emagrecimento feminino
+- [Sobre](https://aline-nutri-sigma.vercel.app/sobre/): formação, trajetória e valores
+- [Acompanhamento nutricional em Curitiba](https://aline-nutri-sigma.vercel.app/acompanhamento-nutricional-curitiba/): trimestral ou semestral, suporte semanal
+- [Consulta com nutricionista em Curitiba](https://aline-nutri-sigma.vercel.app/consulta-nutricionista-curitiba/): consulta única com 45 dias de suporte
+- [Emagrecimento feminino em Curitiba](https://aline-nutri-sigma.vercel.app/emagrecimento-feminino-curitiba/)
+- [Nutricionista comportamental em Curitiba](https://aline-nutri-sigma.vercel.app/nutricionista-comportamental-curitiba/): compulsão alimentar e fome emocional
+- [Nutricionista no Batel](https://aline-nutri-sigma.vercel.app/nutricionista-batel-curitiba/)
+- [Nutricionista online](https://aline-nutri-sigma.vercel.app/nutricionista-online/)
+- [Depoimentos](https://aline-nutri-sigma.vercel.app/depoimentos/): avaliações no Google e no AvaliaMed
+- [Dúvidas frequentes](https://aline-nutri-sigma.vercel.app/perguntas-frequentes/)
+- [Contato](https://aline-nutri-sigma.vercel.app/contato/)

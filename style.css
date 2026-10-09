@@ -344,6 +344,14 @@ footer.on-clay .btn:hover{background:var(--paper);color:var(--olive);border-colo
 .contact-grid .ph{aspect-ratio:4/3}
 img.ph{display:block;width:100%;height:auto;object-fit:cover;background:var(--sand)}
 .mpanel .grp{text-decoration:none}
+.foot-bottom a{color:inherit;text-underline-offset:3px}
+.ck{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;max-width:560px;background:#fff;color:#2E2A22;padding:18px 20px;box-shadow:0 14px 40px -16px rgba(40,30,20,.45);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.ck[hidden]{display:none!important}
+.ck p{flex:1 1 260px;font-size:14px;line-height:1.5;margin:0}
+.ck a{color:#AF4425}
+.ck-b{display:flex;gap:10px}
+.ck .btn{padding:10px 16px;font-size:11px;cursor:pointer;background:none;color:#48221D;font-family:var(--body)}
+.ck .btn.solid{background:#AF4425;border-color:#AF4425;color:#fff}
 .stars{color:#B08A3E;letter-spacing:.12em;font-size:14px;margin:0 0 12px}
 .review{display:flex;flex-direction:column;margin:0}
 .review blockquote{flex:1;font-size:17.5px;line-height:1.5}
