@@ -580,3 +580,7 @@ footer.on-clay{background:var(--forest)}
   .arch,
   img.ph{justify-self:center!important;margin-inline:auto!important}
 }
+/* === header fixo (sticky) desktop + mobile === */
+html{scroll-padding-top:96px}
+header.site-head{position:sticky;top:0;z-index:100;box-shadow:0 2px 18px -12px rgba(40,30,20,.4);padding-block:16px}
+@media (max-width:860px){header.site-head{padding-block:12px}header.site-head .mnav .mpanel{max-height:calc(100vh - 80px)}}
