@@ -555,8 +555,9 @@ body{color:#2E2A22}
 .btn.dark{color:var(--wine)}
 .btn.dark:hover{background:var(--wine);border-color:var(--wine);color:#fff}
 .on-clay .btn:hover{background:var(--wine);border-color:var(--wine);color:#fff}
-.wa-float{background:var(--rust)}
-.wa-float:hover{background:var(--wine)}
+.wa-float{background:#25D366;color:#fff}
+.wa-float:hover{background:#1EBE57}
+.wa-float svg{width:26px;height:26px}
 .plans span.rec{background:var(--rust);border-color:var(--rust);color:#fff}
 .mid-cta{background:var(--butter)}
 .mid-cta .micro{color:#4A4438}
