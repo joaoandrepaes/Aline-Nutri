@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aline-nutri-sigma.vercel.app/sitemap.xml
+Sitemap: https://alinefernandanutri.com.br/sitemap.xml
