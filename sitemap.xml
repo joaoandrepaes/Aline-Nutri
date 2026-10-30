@@ -1,16 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://alinefernandanutri.com.br/</loc><lastmod>2026-10-21</lastmod><priority>1.0</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/sobre/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/servicos/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/especialidades/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/acompanhamento-nutricional-curitiba/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/consulta-nutricionista-curitiba/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/emagrecimento-feminino-curitiba/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/nutricionista-comportamental-curitiba/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/nutricionista-batel-curitiba/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/nutricionista-online/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/depoimentos/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/perguntas-frequentes/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://alinefernandanutri.com.br/contato/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/servicos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/servico-posicionamento-google-ia</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/servico-google-meu-negocio</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/servico-criacao-sites</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/sobre</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/cases</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/blog</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/seo-para-pequenas-empresas</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://assessoriaatlas.com.br/por-que-minha-empresa-nao-aparece-no-google</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/contato</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/google-meu-negocio</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/otimizar-google-meu-negocio</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/o-que-e-seo</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://assessoriaatlas.com.br/o-que-e-geo</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://assessoriaatlas.com.br/como-saber-se-meu-site-aparece-no-google</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
