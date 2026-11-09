@@ -6,10 +6,8 @@ name: Migração única do servidor (09/11/2026)
 # 3) envia o site do repositório para a pasta certa
 # 4) apaga a pasta public_html solta criada por engano no primeiro envio
 # (2ª rodada: move as duas pastas que faltaram, politica-de-privacidade e servicos)
+# Desligada: só roda se alguém clicar em "Run workflow" em Actions.
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/migracao.yml']
   workflow_dispatch:
 
 concurrency:
