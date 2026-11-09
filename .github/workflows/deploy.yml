@@ -1,0 +1,44 @@
+name: Publicar site na Hostinger
+
+# Envia o site por FTP para a Hostinger sempre que algo entra na branch main.
+# Também pode ser rodado à mão em Actions > Publicar site na Hostinger > Run workflow.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Conferir se a senha do FTP foi cadastrada
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ -z "$FTP_PASSWORD" ]; then
+            echo "::error::Falta cadastrar o segredo FTP_PASSWORD em Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Enviar arquivos por FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 212.85.9.154
+          username: u745141359
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          server-dir: public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            README.md
+            vercel.json
