@@ -48,8 +48,8 @@ jobs:
           echo "=== raiz do FTP ==="
           pwd
           cls -1 -a
-          echo "=== domains ==="
-          cls -1 domains/
+          echo "=== public_html ==="
+          cls -l public_html/
           echo "=== fim ==="
           quit
           mirror --reverse --verbose --only-newer --no-perms --exclude-glob .git/ --exclude-glob .git* --exclude-glob .github/ --exclude-glob README.md --exclude-glob vercel.json ./ public_html/
