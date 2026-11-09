@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Baixar o repositório
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Conferir se a senha do FTP foi cadastrada
         env:
@@ -43,7 +45,14 @@ jobs:
           set net:max-retries 3
           set net:timeout 30
           open --env-password -u u745141359 ftp://srv2282.hstgr.io
-          mirror --reverse --verbose --only-newer --no-perms --exclude-glob .git* --exclude-glob .github/ --exclude-glob README.md --exclude-glob vercel.json ./ public_html/
+          echo "=== raiz do FTP ==="
+          pwd
+          cls -1 -a
+          echo "=== domains ==="
+          cls -1 domains/
+          echo "=== fim ==="
+          quit
+          mirror --reverse --verbose --only-newer --no-perms --exclude-glob .git/ --exclude-glob .git* --exclude-glob .github/ --exclude-glob README.md --exclude-glob vercel.json ./ public_html/
           quit
           LFTP
           lftp -f "$RUNNER_TEMP/deploy.lftp"
