@@ -5,6 +5,7 @@ name: Migração única do servidor (09/11/2026)
 # 2) move as pastas antigas de página para fora da área pública (nada é apagado)
 # 3) envia o site do repositório para a pasta certa
 # 4) apaga a pasta public_html solta criada por engano no primeiro envio
+# (2ª rodada: move as duas pastas que faltaram, politica-de-privacidade e servicos)
 on:
   push:
     branches: [main]
@@ -62,10 +63,7 @@ jobs:
           {
             cat "$RUNNER_TEMP/base.lftp"
             echo "mkdir -p $ANTIGO"
-            for d in acompanhamento-nutricional-curitiba blog consulta-nutricionista-curitiba contato depoimentos \
-                     emagrecimento-feminino-curitiba especialidades nutricionista-batel-curitiba \
-                     nutricionista-comportamental-curitiba nutricionista-online perguntas-frequentes \
-                     "política de privacidade" "serviços" sobre; do
+            for d in politica-de-privacidade servicos; do
               echo "mv \"$SITE/$d\" \"$ANTIGO/$d\""
             done
             echo "cls -1 $SITE/"

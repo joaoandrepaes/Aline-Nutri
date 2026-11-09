@@ -45,12 +45,7 @@ jobs:
           set net:max-retries 3
           set net:timeout 30
           open --env-password -u u745141359 ftp://srv2282.hstgr.io
-          echo "=== raiz do FTP ==="
-          pwd
-          find -d 3 / | head -120
-          echo "=== fim ==="
-          quit
-          mirror --reverse --verbose --only-newer --no-perms --exclude-glob .git/ --exclude-glob .git* --exclude-glob .github/ --exclude-glob README.md --exclude-glob vercel.json ./ public_html/
+          mirror --reverse --verbose --only-newer --no-perms --exclude-glob .git/ --exclude-glob .git* --exclude-glob .github/ --exclude-glob README.md --exclude-glob vercel.json ./ /domains/alinefernandanutri.com.br/public_html/
           quit
           LFTP
           lftp -f "$RUNNER_TEMP/deploy.lftp"
