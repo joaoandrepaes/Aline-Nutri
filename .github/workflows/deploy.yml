@@ -30,14 +30,6 @@ jobs:
       - name: Instalar o lftp
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
-      - name: Mostrar o certificado do servidor FTP
-        run: |
-          openssl s_client -starttls ftp -connect 212.85.9.154:21 -servername 212.85.9.154 </dev/null 2>/dev/null \
-            | openssl x509 -noout -subject -issuer -ext subjectAltName || true
-          echo "reverso: $(getent hosts 212.85.9.154)"
-          dig +short -x 212.85.9.154 || true
-          openssl s_client -starttls ftp -connect 212.85.9.154:21 </dev/null 2>/dev/null | grep -i -E "^220|hstgr" | head -5 || true
-
       # Envia por FTPS (FTP criptografado, com verificação de certificado).
       # Só envia arquivos novos ou alterados; não apaga nada do servidor.
       - name: Enviar arquivos por FTPS
@@ -50,9 +42,7 @@ jobs:
           set ssl:verify-certificate true
           set net:max-retries 3
           set net:timeout 30
-          debug 2
-          open --env-password -u u745141359 ftp://212.85.9.154
-          cls -1 public_html/ | head -5
+          open --env-password -u u745141359 ftp://srv2282.hstgr.io
           mirror --reverse --verbose --only-newer --no-perms --exclude-glob .git* --exclude-glob .github/ --exclude-glob README.md --exclude-glob vercel.json ./ public_html/
           quit
           LFTP
