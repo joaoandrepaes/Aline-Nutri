@@ -34,7 +34,9 @@ jobs:
         run: |
           openssl s_client -starttls ftp -connect 212.85.9.154:21 -servername 212.85.9.154 </dev/null 2>/dev/null \
             | openssl x509 -noout -subject -issuer -ext subjectAltName || true
-          for h in ftp.alinefernandanutri.com.br alinefernandanutri.com.br; do echo "$h -> $(getent hosts $h | awk '{print $1}')"; done
+          echo "reverso: $(getent hosts 212.85.9.154)"
+          dig +short -x 212.85.9.154 || true
+          openssl s_client -starttls ftp -connect 212.85.9.154:21 </dev/null 2>/dev/null | grep -i -E "^220|hstgr" | head -5 || true
 
       # Envia por FTPS (FTP criptografado, com verificação de certificado).
       # Só envia arquivos novos ou alterados; não apaga nada do servidor.
