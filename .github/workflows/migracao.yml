@@ -1,0 +1,89 @@
+name: Migração única do servidor (09/11/2026)
+
+# Rodou uma vez para trocar o site antigo (uma pasta por página) pelo site do repositório (arquivos .html soltos).
+# 1) baixa uma cópia do site no ar e guarda como artefato do GitHub (backup)
+# 2) move as pastas antigas de página para fora da área pública (nada é apagado)
+# 3) envia o site do repositório para a pasta certa
+# 4) apaga a pasta public_html solta criada por engano no primeiro envio
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/migracao.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+
+jobs:
+  migrar:
+    runs-on: ubuntu-latest
+    env:
+      LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      SITE: /domains/alinefernandanutri.com.br/public_html
+      ANTIGO: /domains/alinefernandanutri.com.br/site-antigo-2026-11-09
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Instalar o lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Configuração comum do lftp
+        run: |
+          cat > "$RUNNER_TEMP/base.lftp" <<'LFTP'
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
+          set ssl:verify-certificate true
+          set net:max-retries 3
+          set net:timeout 30
+          open --env-password -u u745141359 ftp://srv2282.hstgr.io
+          LFTP
+
+      - name: 1. Backup do site no ar
+        run: |
+          mkdir -p "$RUNNER_TEMP/backup"
+          { cat "$RUNNER_TEMP/base.lftp"; echo "mirror --verbose --no-perms $SITE/ $RUNNER_TEMP/backup/"; echo quit; } > "$RUNNER_TEMP/s1.lftp"
+          lftp -f "$RUNNER_TEMP/s1.lftp"
+          echo "Arquivos no backup:"; find "$RUNNER_TEMP/backup" -type f | wc -l
+          test -f "$RUNNER_TEMP/backup/index.html"
+
+      - name: Guardar o backup no GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: backup-site-aline-antes-da-migracao-2026-11-09
+          path: ${{ runner.temp }}/backup/
+          include-hidden-files: true
+          retention-days: 90
+
+      - name: 2. Mover as pastas antigas para fora da área pública
+        run: |
+          {
+            cat "$RUNNER_TEMP/base.lftp"
+            echo "mkdir -p $ANTIGO"
+            for d in acompanhamento-nutricional-curitiba blog consulta-nutricionista-curitiba contato depoimentos \
+                     emagrecimento-feminino-curitiba especialidades nutricionista-batel-curitiba \
+                     nutricionista-comportamental-curitiba nutricionista-online perguntas-frequentes \
+                     "política de privacidade" "serviços" sobre; do
+              echo "mv \"$SITE/$d\" \"$ANTIGO/$d\""
+            done
+            echo "cls -1 $SITE/"
+            echo quit
+          } > "$RUNNER_TEMP/s2.lftp"
+          lftp -f "$RUNNER_TEMP/s2.lftp"
+
+      - name: 3. Enviar o site do repositório
+        run: |
+          { cat "$RUNNER_TEMP/base.lftp"
+            echo "mirror --reverse --verbose --no-perms --exclude-glob .git/ --exclude-glob .git* --exclude-glob .github/ --exclude-glob README.md --exclude-glob vercel.json ./ $SITE/"
+            echo quit; } > "$RUNNER_TEMP/s3.lftp"
+          lftp -f "$RUNNER_TEMP/s3.lftp"
+
+      - name: 4. Apagar a pasta public_html solta (criada por engano)
+        run: |
+          { cat "$RUNNER_TEMP/base.lftp"
+            echo "rm -r -f /public_html/public_html/"
+            echo "cls -1 -a /public_html/"
+            echo quit; } > "$RUNNER_TEMP/s4.lftp"
+          lftp -f "$RUNNER_TEMP/s4.lftp"
